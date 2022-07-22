@@ -1,11 +1,10 @@
 
 
 window.addEventListener('keydown', (e) => {
-    let key = e.keyCode;
-    let myDiv = document.querySelector(`div[data-key="${key}"]`);
+    let key = e.key;
+    let myDiv = document.querySelector(`div[data-char="${key}"]`);
 
-
-    let audioFile = document.querySelector(`audio[data-key="${key}"]`);
+    let audioFile = document.querySelector(`audio[char="${key}"]`);
     if (audioFile !== null) {
         audioFile.currentTime = 0;
         audioFile.play();
@@ -16,3 +15,4 @@ window.addEventListener('keydown', (e) => {
     }
 
 });
+
